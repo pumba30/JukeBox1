@@ -40,5 +40,20 @@ public class Song implements Comparable<Song> {
         return title.compareTo(song.getTitle());
     }
 
+    //переопределив методы equals() и hashCode() уберем дубликаты объектов Song
+    //из множества HashSet
+
+    //переопределим метол equals()
+    @Override
+    public  boolean equals(Object Song){
+        Song aSong = (Song) Song;
+        return  getTitle().equals(aSong.getTitle());
+    }
+
+    //переопределим метод hashCode
+    public int hashCode(){
+        return title.hashCode();
+    }
+
 
 }

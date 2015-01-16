@@ -27,6 +27,7 @@ public class JukeBox1 {
         Collections.sort(songList);
         System.out.println(songList);
 
+        //сортировка по артистам
         ArtistCompare artistCompare = new ArtistCompare();
         Collections.sort(songList, artistCompare);
         System.out.println(songList);
