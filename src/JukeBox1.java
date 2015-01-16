@@ -1,10 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by pumba30 on 15.01.2015.
@@ -34,8 +31,14 @@ public class JukeBox1 {
 
         HashSet<Song> songHashSet = new HashSet<Song>();
         //добавим весь список множество songHashSet
+        //нет дубликатов, но сортировка не сохраняется
         songHashSet.addAll(songList);
         System.out.println(songHashSet);
+
+        //сохранение в TreeSet - сохраняется сортировка
+        TreeSet<Song> songs = new TreeSet<Song>(artistCompare);
+        songs.addAll(songList);
+        System.out.println(songs);
 
     }
 
