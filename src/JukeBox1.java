@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -29,6 +30,11 @@ public class JukeBox1 {
         ArtistCompare artistCompare = new ArtistCompare();
         Collections.sort(songList, artistCompare);
         System.out.println(songList);
+
+        HashSet<Song> songHashSet = new HashSet<Song>();
+        //добавим весь список множество songHashSet
+        songHashSet.addAll(songList);
+        System.out.println(songHashSet);
 
     }
 
